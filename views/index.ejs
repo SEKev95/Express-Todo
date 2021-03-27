@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+    <h1>Your To Do</h1>
+    <img src="pat.gif"></img>
+    <section class="add-element">
+    <input id="add" type="text" placeholder="Write your list">
+    <button id="btn">Add</button>
+    </section>
+        <section class='element-list'>
+           
+            <ul id="list"> 
+            <% for(i = 0; i < todomessages.length; i++){ %> 
+                <li>
+                    <span><%= todomessages[i].task %></span> 
+                </li>
+            <% } %>
+            </ul>
+           
+           
+        
+        <input class="buttons" type="button" value="Remove Completed" onclick="removeComp()"> 
+        <input class="buttons" type="button" value="Remove All" onclick="removeAll()"> 
+        </section> 
+    </section>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
